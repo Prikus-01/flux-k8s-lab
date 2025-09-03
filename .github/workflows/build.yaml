@@ -16,5 +16,5 @@ jobs :
         password : ${{secrets.GITHUB_TOKEN}}
     - name : Build and push
       run: |
-        docker build -t ghcr.io/${{github.repository}}/hello-app:latest
+        docker build -t ghcr.io/${{github.repository}}/hello-app:latest .
         bocker push ghcr.io/${{github.repository}}/hello-app:latest
